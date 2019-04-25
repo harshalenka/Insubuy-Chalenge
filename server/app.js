@@ -9,7 +9,7 @@ const bodyParser = require('body-parser');
 const indexRouter = require('./routes/index');
 const quotesRouter = require('./routes/quotes');
 const apiRouter = require('./routes/api');
-
+const userRouter = require('./routes/form');
 const app = express();
 
 app.use(logger('dev'));
@@ -27,6 +27,7 @@ app.set('view engine', 'html');
 app.use('/', indexRouter);
 app.use('/quotes', quotesRouter);
 app.use('/api', apiRouter);
+app.use('/form', userRouter);
 
 app.listen(8080,() => console.log(`Application started on port 8080, Go to http://localhost:8080`));
 
