@@ -32,10 +32,10 @@
             </section>
 
 			<section >
-								<form class="register" name="user-info">
+								<form class="register" id="registerFrom" name="user-info">
 									<h3 class="register-h3">Travel Insurance</h3>
 									<label class="register-label">Policy Maximum
-									<select class="register-input">
+									<select name="policyMax" class="register-input">
 									  <option value="">Choose policy maximum</option>
 									  <option value="50">"50,000"</option>
 									  <option value="100">"100,000"</option>
@@ -43,23 +43,25 @@
 									  <option value="500">"500,000"</option>
 									</select>
 									<label class="register-label">Age
-									<input type="text" class="register-input" placeholder="Choose your age"></label>
+									<input type="text" name="age" class="register-input" placeholder="Choose your age"></label>
 									<label class="register-label">Travel Dates
 									<span  style="float:left">
-									<input type="date" class="register-input" >
+									<input type="date" name="startDate" class="register-input" >
 									</span>
 									<span style="float:right">
-									<input type="date" class="register-input">
+									<input type="date" name="endDate" class="register-input">
 									</span>
 									</label>
 
 									<label class="register-label">Citizenship
-									<input type="text" class="register-input" placeholder="Citizenship"></label>
+									<input type="text" name="citizenShip" class="register-input" placeholder="Citizenship"></label>
 									<label class="register-label">Mailing State
-									<input type="text" class="register-input" placeholder="Mailing State"></label>
-									<input type="submit" value="Get Quotes" class="register-button"> 
+									<input type="text" name="mailingState" class="register-input" placeholder="Mailing State"></label>
+									<input value="Get Quotes" id="formSubmit" class="register-button"> 
 									<div style="text-align:center;"><a href="#">Reset Quote</a></div>
 							    </form>
-		    </section>
+            </section>
+            <script src="../js/jquery.js"></script>
+            <script src="../js/formRuntime.js"></script>
 		</body>
 </html>
