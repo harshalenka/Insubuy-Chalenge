@@ -25,7 +25,7 @@ app.engine('html', es6Renderer);
 app.set('views',__dirname +'/public/views');
 app.set('view engine', 'html');
 
-app.use('/', index);
+app.use('/', indexRouter);
 app.use('/quotes', quotesRouter);
 app.use('/api', apiRouter);
 app.use('/form', userRouter);
