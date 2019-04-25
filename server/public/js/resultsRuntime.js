@@ -21,7 +21,8 @@ var app = {
         $('#gridView').show();
     },
     filterClickHandler: function(){
-
+        $('#listView').hide();
+        $('#gridView').hide();
     },
     renderPage: function(data){
         data.quotes.forEach($.proxy(function(quote){
@@ -39,7 +40,7 @@ var app = {
         tr+=("<div class='more-info'>"+"<h1>"+item.name+"</h1>"+"<p>"+item.description+"</p>"+"<span class='more'>Mouse over the card for more info</span>"+"</div></div>");
         tr+=("<div class='general'>"+"<h1>"+item.name+"</h1>"+"<div class='coords'>"+"<span>Type:"+item.type+"</span>"+"</div>");
         tr+=("<div class='coords'>"+"<span>BestSeller:"+item.bestSellers+"</div>");
-        tr+=("<div class='stats'><div>"+"<div class='title'>Section</div>"+"<i class='fa fa-trophy'></i>"+"<div class='value'>"+item.section+"</div>"+"</div>");
+        tr+=("<div class='stats'><div>"+"<div class='title'>Section:"+item.section+"</div>"+"<i class='fa fa-trophy'></i>"+"<div class='value'>"+item.section+"</div>"+"</div>");
         tr+=("</div></div></div>");
 
         $('#listViewTable').append(tr);
